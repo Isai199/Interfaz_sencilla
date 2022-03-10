@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvBrightness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Brightness"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"/>
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/iconBrightness"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/tvBrightness"
+        android:src="@drawable/brillo"/>
+
+
+    <SeekBar
+        android:id="@+id/sBarBrightness"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_toRightOf="@id/iconBrightness"
+        android:layout_below="@id/tvBrightness"
+        android:max="10" />
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@id/sBarBrightness"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:id="@+id/tvAutoAdjustTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto adjust brightness"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@id/view1"
+        />
+    <TextView
+        android:id="@+id/tvAutoAdjustInfo"
+        android:layout_below="@id/tvAutoAdjustTitle"
+        android:layout_width="300dp"
+        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content"
+        android:text="@string/textoAutoAdjust"/>
+
+    <Switch
+        android:id="@+id/switchAutoAdjust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAutoAdjustTitle"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/tvAutoAdjustInfo" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@id/tvAutoAdjustInfo"
+        android:background="@android:color/darker_gray"/>
+
+
+    <TextView
+        android:id="@+id/tvBlueLightTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Blue light filter"
+        android:layout_below="@id/view2"/>
+    <TextView
+        android:id="@+id/tvBlueLightInfo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/textoBlueLight"
+        android:layout_below="@id/tvBlueLightTitle"/>
+    <Switch
+        android:id="@+id/switchBlueLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/tvAutoAdjustInfo"
+        android:layout_below="@id/tvBlueLightTitle"/>
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@id/tvBlueLightInfo"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tvScrenMode"
+        android:text="Screen mode"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view3"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/tvAdaptive"
+        android:text="adaptive display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/teal_200"
+        android:layout_below="@id/tvScrenMode"
+        android:layout_alignParentLeft="true"/>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@id/tvAdaptive"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tvScrenZoom"
+        android:text="Screen mode"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view4"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/tvMSD"
+        android:text="Medium,Small,Default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/teal_200"
+        android:layout_below="@id/tvScrenZoom"
+        android:layout_alignParentLeft="true"/>
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@id/tvMSD"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tvHomeScreen"
+        android:text="Home screen"
+        android:textStyle="normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@id/view5"
+        android:layout_alignParentLeft="true"/>
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@id/tvHomeScreen"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:id="@+id/tvEasyMode"
+        android:text="Easy Mode"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view6"
+        android:layout_alignParentLeft="true"/>
+    <TextView
+        android:id="@+id/tvDisable"
+        android:text="Disable"
+        android:textStyle="normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/teal_200"
+        android:layout_below="@id/tvEasyMode"
+        android:layout_alignParentLeft="true"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvDisable"
+        android:layout_marginBottom="15dp"
+        android:background="@android:color/darker_gray"/>
+
+
+
+
+</RelativeLayout>

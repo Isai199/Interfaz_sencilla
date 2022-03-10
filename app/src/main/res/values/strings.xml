@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Interfaz_sencilla</string>
+
+
+
+    <!--Textos-->
+    <string name="textoAutoAdjust">Adjust the screen brightness automatically based on the light emitted by the screen</string>
+    <string name="textoBlueLight">reduce eye strain by limiting the amount of blue light emitted by the screen</string>
+</resources>
